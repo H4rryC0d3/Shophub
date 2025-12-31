@@ -1,0 +1,585 @@
+/* ==================== TRACK ORDER PAGE SPECIFIC STYLES ==================== */
+/* Import global.css first for shared variables */
+
+/* ==================== TRACK ORDER PAGE BASE ==================== */
+.track-order-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* ==================== TRACK HEADER ==================== */
+.track-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.track-icon {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.track-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  letter-spacing: -1px;
+}
+
+.track-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==================== TRACKING FORM CARD ==================== */
+.tracking-form-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.625rem;
+}
+
+.form-input-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.track-input {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.track-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.track-input::placeholder {
+  color: var(--text-muted);
+}
+
+.track-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.track-button:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.track-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==================== TRACKING RESULTS ==================== */
+.tracking-results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== STATUS CARD ==================== */
+.status-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  gap: 1rem;
+}
+
+.order-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+.delivery-estimate {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.delivery-date {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.status-badge-container {
+  flex-shrink: 0;
+}
+
+.status-badge {
+  padding: 0.625rem 1.25rem;
+  background: #f3e8ff;
+  color: #8b5cf6;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid #e9d5ff;
+}
+
+/* ==================== LOCATION INFO ==================== */
+.location-info {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.location-icon {
+  flex-shrink: 0;
+  color: var(--primary-color);
+  margin-top: 2px;
+}
+
+.location-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.25rem 0;
+}
+
+.location-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ==================== TIMELINE CARD ==================== */
+.timeline-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.timeline-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.3px;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ==================== TIMELINE ICON COLUMN ==================== */
+.timeline-icon-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.icon-completed {
+  background: #dcfce7;
+  color: #16a34a;
+  border: 2px solid #bbf7d0;
+}
+
+.icon-pending {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 2px solid var(--border-color);
+}
+
+.icon-current {
+  background: #dbeafe;
+  color: #2563eb;
+  border: 2px solid #bfdbfe;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
+  }
+}
+
+.timeline-connector {
+  width: 2px;
+  flex: 1;
+  min-height: 40px;
+  margin: 0.5rem 0;
+}
+
+.connector-completed {
+  background: #16a34a;
+}
+
+.connector-pending {
+  background: var(--border-color);
+}
+
+/* ==================== TIMELINE CONTENT ==================== */
+.timeline-content {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.timeline-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.375rem;
+}
+
+.timeline-status {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.status-current {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.status-normal {
+  color: var(--text-primary);
+}
+
+.timeline-time {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.timeline-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==================== ACTIONS CARD ==================== */
+.actions-card {
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.actions-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.3px;
+}
+
+.actions-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.support-button,
+.issue-button {
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.support-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.support-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.issue-button {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.issue-button:hover {
+  border-color: var(--primary-color);
+  background: var(--bg-secondary);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .track-order-page {
+    padding: 3rem 1rem;
+  }
+
+  .track-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .track-title {
+    font-size: 2rem;
+  }
+
+  .track-subtitle {
+    font-size: 1rem;
+  }
+
+  .tracking-form-card {
+    padding: 2rem;
+  }
+
+  .form-input-group {
+    flex-direction: column;
+  }
+
+  .track-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .status-card {
+    padding: 1.5rem;
+  }
+
+  .status-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .status-badge-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .order-number {
+    font-size: 1.25rem;
+  }
+
+  .timeline-card {
+    padding: 1.5rem;
+  }
+
+  .timeline-heading {
+    font-size: 1.25rem;
+  }
+
+  .timeline-item {
+    gap: 1rem;
+  }
+
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .timeline-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-status {
+    font-size: 1rem;
+  }
+
+  .actions-card {
+    padding: 1.5rem;
+  }
+
+  .actions-buttons {
+    flex-direction: column;
+  }
+
+  .support-button,
+  .issue-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-order-page {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .track-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .track-title {
+    font-size: 1.75rem;
+  }
+
+  .track-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .tracking-form-card {
+    padding: 1.5rem;
+  }
+
+  .track-input {
+    padding: 0.875rem 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .track-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .status-card {
+    padding: 1.25rem;
+  }
+
+  .order-number {
+    font-size: 1.125rem;
+  }
+
+  .delivery-estimate {
+    font-size: 0.875rem;
+  }
+
+  .location-info {
+    padding: 1rem;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+  }
+
+  .timeline-heading {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .timeline-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-status {
+    font-size: 0.9375rem;
+  }
+
+  .timeline-time {
+    font-size: 0.8125rem;
+  }
+
+  .timeline-date {
+    font-size: 0.8125rem;
+  }
+
+  .actions-card {
+    padding: 1.25rem;
+  }
+
+  .actions-heading {
+    font-size: 1.125rem;
+  }
+
+  .support-button,
+  .issue-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}

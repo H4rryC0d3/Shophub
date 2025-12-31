@@ -1,0 +1,598 @@
+/* ==================== SHIPPING PAGE SPECIFIC STYLES ==================== */
+/* Import global.css first for shared variables */
+
+/* ==================== SHIPPING PAGE BASE ==================== */
+.shipping-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* ==================== SHIPPING HEADER ==================== */
+.shipping-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.shipping-icon {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.shipping-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  letter-spacing: -1px;
+}
+
+.shipping-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ==================== SHIPPING OPTIONS GRID ==================== */
+.shipping-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.option-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.option-card:hover {
+  border-color: var(--card-hover-border);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.option-popular {
+  border: 2px solid #8b5cf6;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  padding: 0.375rem 0.875rem;
+  background: #8b5cf6;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.option-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.option-blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.option-purple {
+  background: #f3e8ff;
+  color: #8b5cf6;
+}
+
+.option-green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.option-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.option-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.3px;
+}
+
+.option-time {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+}
+
+.option-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
+}
+
+.option-price-purple {
+  color: #8b5cf6;
+}
+
+.option-price-green {
+  color: #16a34a;
+}
+
+.option-note {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==================== SECTION STYLES ==================== */
+.rates-section,
+.international-section,
+.processing-section,
+.delivery-section {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.5px;
+}
+
+.section-heading svg {
+  color: var(--primary-color);
+}
+
+/* ==================== RATES TABLE ==================== */
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-primary);
+}
+
+.rates-table thead {
+  background: var(--bg-secondary);
+}
+
+.rates-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.rates-table td {
+  padding: 1rem 1.5rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rates-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rates-table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.highlight-row {
+  background: #f9fafb;
+}
+
+.bold-cell {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.free-cell {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* ==================== INTERNATIONAL SECTION ==================== */
+.international-intro {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.region-card {
+  padding: 1.75rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.region-card:hover {
+  border-color: var(--card-hover-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.region-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+  letter-spacing: -0.3px;
+}
+
+.region-rates {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  padding: 0.625rem 0;
+}
+
+.rate-price {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ==================== PROCESSING SECTION ==================== */
+.processing-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.processing-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+}
+
+.processing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.processing-list li {
+  padding-left: 1.75rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  position: relative;
+}
+
+.processing-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.tracking-notice {
+  padding: 1rem 1.5rem;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  color: #1e40af;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+/* ==================== DELIVERY SECTION ==================== */
+.delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.subsection-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.3px;
+}
+
+.delivery-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.delivery-list li {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ==================== RESTRICTIONS SECTION ==================== */
+.restrictions-section {
+  padding: 2rem;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+}
+
+.restrictions-title {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #92400e;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.3px;
+}
+
+.restrictions-icon {
+  color: #d97706;
+}
+
+.restrictions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.restrictions-list li {
+  font-size: 0.9375rem;
+  color: #92400e;
+  line-height: 1.7;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .shipping-page {
+    padding: 3rem 1rem;
+  }
+
+  .shipping-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .shipping-title {
+    font-size: 2rem;
+  }
+
+  .shipping-subtitle {
+    font-size: 1rem;
+  }
+
+  .shipping-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .option-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+  }
+
+  .rates-table th,
+  .rates-table td {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .regions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .processing-content {
+    padding: 1.5rem;
+  }
+
+  .restrictions-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .shipping-page {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .shipping-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .shipping-title {
+    font-size: 1.75rem;
+  }
+
+  .shipping-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .option-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .option-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .option-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .option-title {
+    font-size: 1.25rem;
+  }
+
+  .option-price {
+    font-size: 1.75rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-heading svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rates-table th,
+  .rates-table td {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .region-card {
+    padding: 1.5rem;
+  }
+
+  .region-title {
+    font-size: 1rem;
+  }
+
+  .rate-item {
+    font-size: 0.875rem;
+  }
+
+  .processing-content {
+    padding: 1.25rem;
+  }
+
+  .processing-content p,
+  .processing-list li {
+    font-size: 0.875rem;
+  }
+
+  .tracking-notice {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .subsection-title {
+    font-size: 1rem;
+  }
+
+  .delivery-list li {
+    font-size: 0.875rem;
+  }
+
+  .restrictions-section {
+    padding: 1.25rem;
+  }
+
+  .restrictions-title {
+    font-size: 1rem;
+  }
+
+  .restrictions-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .restrictions-list li {
+    font-size: 0.875rem;
+  }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@media (prefers-reduced-motion: no-preference) {
+  .option-card {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .option-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .option-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .option-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

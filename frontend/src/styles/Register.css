@@ -1,0 +1,255 @@
+/* ==================== REGISTER PAGE SPECIFIC STYLES ==================== */
+/* Import global.css first for shared variables */
+
+/* ==================== REGISTER PAGE BASE ==================== */
+.register-page {
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--bg-secondary);
+}
+
+/* ==================== REGISTER CONTAINER ==================== */
+.register-container {
+  width: 100%;
+  max-width: 440px;
+  padding: 3rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+/* ==================== REGISTER ICON ==================== */
+.register-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.register-icon {
+  color: var(--primary-color);
+}
+
+/* ==================== REGISTER TITLE ==================== */
+.register-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.5px;
+}
+
+/* ==================== ERROR MESSAGE ==================== */
+.error-message {
+  padding: 1rem 1.25rem;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #dc2626;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* ==================== REGISTER FORM ==================== */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-input {
+  padding: 0.875rem 1rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ==================== SUBMIT BUTTON ==================== */
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==================== LOGIN PROMPT ==================== */
+.login-prompt {
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.login-link {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
+}
+
+.login-link:hover {
+  text-decoration-color: var(--primary-color);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .register-page {
+    padding: 1.5rem;
+  }
+
+  .register-container {
+    padding: 2.5rem 2rem;
+  }
+
+  .register-icon-wrapper {
+    margin-bottom: 1.25rem;
+  }
+
+  .register-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .register-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .register-form {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-page {
+    padding: 1rem;
+  }
+
+  .register-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .register-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .register-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .error-message {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .form-input {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .submit-button {
+    padding: 0.875rem;
+    font-size: 0.9375rem;
+  }
+
+  .login-prompt {
+    font-size: 0.875rem;
+  }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@media (prefers-reduced-motion: no-preference) {
+  .register-container {
+    animation: fadeInUp 0.5s ease-out;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== FOCUS STATES ==================== */
+.submit-button:focus-visible,
+.login-link:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}

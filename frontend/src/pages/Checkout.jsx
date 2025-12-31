@@ -442,28 +442,15 @@ export const CheckoutPage = ({ setCurrentPage }) => {
                       <Smartphone size={24} />
                       <div>
                         <h3>UPI</h3>
-                        <p>PhonePe, Google Pay, Paytm & More</p>
+                        <p>PhonePe, Google Pay & More</p>
                       </div>
                     </div>
                     {paymentMethod === 'upi' && (
                       <div className="payment-details">
                         <div className="upi-options">
-                          <button className="upi-btn" type="button">
-                            <div className="upi-icon phonepe">P</div>
-                            PhonePe
-                          </button>
-                          <button className="upi-btn" type="button">
-                            <div className="upi-icon gpay">G</div>
-                            Google Pay
-                          </button>
-                          <button className="upi-btn" type="button">
-                            <div className="upi-icon paytm">P</div>
-                            Paytm
-                          </button>
+                      
                         </div>
-                        <div className="divider">
-                          <span>OR</span>
-                        </div>
+                        
                         <div className="form-group">
                           <label>Enter UPI ID</label>
                           <input
